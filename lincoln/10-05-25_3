@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	while(1){
+		float a,b,c, delta, x1, x2;
+		printf("Digite os coeficientes a, b e c:\n");
+		scanf("%f%f%f", &a,&b,&c);
+		
+		delta = pow(b,2)-(4*a*c);
+		x1 = (- b + sqrt(delta))/2*a;
+		x2 = (- b - sqrt(delta))/2*a;
+		
+		if(delta < 0)printf("NAO TEM RAIZES REAIS\n");
+		if(delta == 0)printf("TEM UMA RAIZ = %g \n",x1);
+		if(delta > 0)printf("RAIZES  = %g, %g \n",x1, x2 );
+}
+	return 0;
+}
